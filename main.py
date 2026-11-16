@@ -1,22 +1,28 @@
-# Lavendel-Pflanz-Bot
+# Importiere die benötigten Bibliotheken
+import cv2
+import numpy as np
 
-import random
+# Definiere die Funktionen für die Kamerakalibrierung
+def kalibriere_kamera():
+    # TODO: Implementiere die Kamerakalibrierung
+    print("Kamerakalibrierung wird durchgeführt...")
+    return True
 
-# Liste der bereits gepflanzten Blumen
-gepflanzte_blumen = []
-
+# Definiere die Funktionen für die Lavendelpflanzung
 def pflanze_lavendel(x, z):
-    if (x, z) not in gepflanzte_blumen:
-        print(f"Pflanze Lavendel an Position ({x}, {z})")
-        gepflanzte_blumen.append((x, z))
-    else:
-        print(f"An Position ({x}, {z}) wächst schon eine Blume!")
+    # TODO: Implementiere die Lavendelpflanzung
+    print(f"Lavendel wird an Position ({x}, {z}) gepflanzt...")
 
-# Beispiel:
+# Hauptprogramm
+if __name__ == "__main__":
+    # Überprüfe, ob die Kamera kalibriert ist
+    if not kalibriere_kamera():
+        print("Kamerakalibrierung fehlgeschlagen!")
+        exit()
 
-for i in range(5):
-    x = random.randint(-5, 5)
-    z = random.randint(-5, 5)
-    pflanze_lavendel(x, z)
+    # Pflanze Lavendel an verschiedenen Positionen
+    pflanze_lavendel(1, 2)
+    pflanze_lavendel(3, 4)
+    pflanze_lavendel(5, 6)
 
-print("Lavendel-Pflanz-Bot beendet, nya!")
+    print("Lavendelpflanzung abgeschlossen!")
