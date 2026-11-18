@@ -1,27 +1,21 @@
-# -*- coding: utf-8 -*-
-
-import cv2
 import numpy as np
+import cv2
 
-# TODO: Kalibrierung der Kameraperspektive
-# TODO: Pflanzalgorithmus implementieren
+# Bild aufnehmen (Dummy)
+img = np.zeros((480, 640, 3), dtype=np.uint8)
 
-# Dummy-Funktion für die Pflanzung
-def pflanze_lavendel(x, y):
-    print(f"Lavendel gepflanzt an Position ({x}, {y})")
+# Pflanzpositionen (Dummy)
 
-if __name__ == '__main__':
-    print("Lavendel-Pflanz-Bot startet...")
-    
-    # Bild aufnehmen (Dummy)
-    img = np.zeros((480, 640, 3), dtype=np.uint8)
-    
-    # Pflanzpositionen (Dummy)
-    pflanzpositionen = [(100, 100), (200, 150), (300, 200)]
+pflanzpositionen = [(100, 100), (200, 150), (300, 200)]
 
-    # TODO: Hier die Kamerakalibrierung einfügen
-    # TODO: Hier den Pflanzalgorithmus implementieren
+# TODO: Hier die Kamerakalibrierung einfügen
+# TODO: Kameramatrix und Verzerrungskoeffizienten laden
+# TODO: Bildpunkte in Weltkoordinaten umwandeln
 
-    # Testpflanzungen
-    for x, y in pflanzpositionen:
-        pflanze_lavendel(x, y)
+# TODO: Hier den Pflanzalgorithmus implementieren
+
+
+
+
+
+
