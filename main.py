@@ -1,16 +1,20 @@
-import pandas as pd
+# Eine einfache Python-Datei, um Lavendel zu pflanzen
 
-# Daten
-daten = {
-    'Pflanze': ['Lavendel', 'Thymian', 'Salbei', 'Rosmarin', 'Schafgarbe'],
-    'Hoehe': [0.5, 0.3, 0.4, 0.6, 0.7],
-    'Bluehtenanzahl': [20, 15, 10, 25, 30],
-    'Blattfarbe': ['gruen', 'gruen', 'gruen', 'gruen', 'gruen']
-}
+def filter_lavendel(x, z):
+  # Hier kommt die Logik, um zu prüfen, ob die Koordinaten
+  # innerhalb des zulässigen Bereichs für Lavendel liegen
+  # Zum Beispiel: wenn x > 5 und z > 2:
+  #   return True
+  # else:
+  #   return False
+  return True
 
-# DataFrame erstellen
-df = pd.DataFrame(daten)
+# TODO: Eine Schleife hinzufügen, um alle freien Flächen zu bepflanzen
 
-# DataFrame ausgeben
-#TODO: Bilderkennung und Pflanzplanung implementieren
-#print(df) # Auskommentiert, da Bilderkennung fehlt
+def main():
+  # Hier kommt die Hauptlogik des Programms
+  # Zum Beispiel: eine Liste von Koordinaten durchlaufen und an die Pflanzfunktion übergeben
+  print("Lavendel wird gepflanzt...")
+
+if __name__ == "__main__":
+  main()
