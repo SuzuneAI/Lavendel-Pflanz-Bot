@@ -1,28 +1,27 @@
-# Importiere die benötigten Bibliotheken
+# -*- coding: utf-8 -*-
+
 import cv2
 import numpy as np
 
-# Definiere die Funktionen für die Kamerakalibrierung
-def kalibriere_kamera():
-    # TODO: Implementiere die Kamerakalibrierung
-    print("Kamerakalibrierung wird durchgeführt...")
-    return True
+# TODO: Kalibrierung der Kameraperspektive
+# TODO: Pflanzalgorithmus implementieren
 
-# Definiere die Funktionen für die Lavendelpflanzung
-def pflanze_lavendel(x, z):
-    # TODO: Implementiere die Lavendelpflanzung
-    print(f"Lavendel wird an Position ({x}, {z}) gepflanzt...")
+# Dummy-Funktion für die Pflanzung
+def pflanze_lavendel(x, y):
+    print(f"Lavendel gepflanzt an Position ({x}, {y})")
 
-# Hauptprogramm
-if __name__ == "__main__":
-    # Überprüfe, ob die Kamera kalibriert ist
-    if not kalibriere_kamera():
-        print("Kamerakalibrierung fehlgeschlagen!")
-        exit()
+if __name__ == '__main__':
+    print("Lavendel-Pflanz-Bot startet...")
+    
+    # Bild aufnehmen (Dummy)
+    img = np.zeros((480, 640, 3), dtype=np.uint8)
+    
+    # Pflanzpositionen (Dummy)
+    pflanzpositionen = [(100, 100), (200, 150), (300, 200)]
 
-    # Pflanze Lavendel an verschiedenen Positionen
-    pflanze_lavendel(1, 2)
-    pflanze_lavendel(3, 4)
-    pflanze_lavendel(5, 6)
+    # TODO: Hier die Kamerakalibrierung einfügen
+    # TODO: Hier den Pflanzalgorithmus implementieren
 
-    print("Lavendelpflanzung abgeschlossen!")
+    # Testpflanzungen
+    for x, y in pflanzpositionen:
+        pflanze_lavendel(x, y)
