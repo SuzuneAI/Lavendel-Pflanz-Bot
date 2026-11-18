@@ -1,21 +1,16 @@
-import numpy as np
-import cv2
+import matplotlib.pyplot as plt
 
-# Bild aufnehmen (Dummy)
-img = np.zeros((480, 640, 3), dtype=np.uint8)
+# Daten für die Tabelle
+variablen = ['Temperatur', 'Bodenfeuchtigkeit', 'Lichtintensität', 'Nährstoffgehalt']
+werte = [20, 60, 80, 40]  # Beispielwerte
 
-# Pflanzpositionen (Dummy)
+# Erstelle das Balkendiagramm
+plt.bar(variablen, werte)
 
-pflanzpositionen = [(100, 100), (200, 150), (300, 200)]
+# Beschrifte das Diagramm
+plt.xlabel('Variablen')
+plt.ylabel('Werte')
+plt.title('Lavendel-Pflanz-Bot: Umweltbedingungen')
 
-# TODO: Hier die Kamerakalibrierung einfügen
-# TODO: Kameramatrix und Verzerrungskoeffizienten laden
-# TODO: Bildpunkte in Weltkoordinaten umwandeln
-
-# TODO: Hier den Pflanzalgorithmus implementieren
-
-
-
-
-
-
+# Zeige das Diagramm
+plt.show()
