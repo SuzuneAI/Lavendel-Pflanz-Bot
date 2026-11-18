@@ -1,16 +1,15 @@
-import matplotlib.pyplot as plt
+import pandas as pd
 
-# Daten für die Tabelle
-variablen = ['Temperatur', 'Bodenfeuchtigkeit', 'Lichtintensität', 'Nährstoffgehalt']
-werte = [20, 60, 80, 40]  # Beispielwerte
+# Daten
+daten = {
+    'Pflanze': ['Lavendel', 'Thymian', 'Salbei', 'Rosmarin', 'Schafgarbe'],
+    'Hoehe': [0.5, 0.3, 0.4, 0.6, 0.7],
+    'Bluehtenanzahl': [20, 15, 10, 25, 30],
+    'Blattfarbe': ['gruen', 'gruen', 'gruen', 'gruen', 'gruen']
+}
 
-# Erstelle das Balkendiagramm
-plt.bar(variablen, werte)
+# DataFrame erstellen
+df = pd.DataFrame(daten)
 
-# Beschrifte das Diagramm
-plt.xlabel('Variablen')
-plt.ylabel('Werte')
-plt.title('Lavendel-Pflanz-Bot: Umweltbedingungen')
-
-# Zeige das Diagramm
-plt.show()
+# DataFrame ausgeben
+print(df)

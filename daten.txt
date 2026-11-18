@@ -1,0 +1,21 @@
+# Lavendel-Pflanz-Bot Daten
+# Datum: 2026-11-18
+
+## Allgemeine Informationen
+
+Art: Echter Lavendel (Lavandula angustifolia)
+Blütezeit: Juli - August
+Duft: Angenehm, warm
+
+## Waldökologie
+
+Bedeutung: Wichtiger Bestandteil des Waldökosystems
+Standort: Sonnig, trocken, nährstoffarm
+Gesellschaftspflanzen: Thymian, Salbei, Rosmarin, Schafgarbe
+
+## Pflanzdaten (Beispiel)
+
+Höhe: ...
+Blütenanzahl: ...
+Blattfarbe: ...
+
