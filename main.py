@@ -12,4 +12,5 @@ daten = {
 df = pd.DataFrame(daten)
 
 # DataFrame ausgeben
-print(df)
+#TODO: Bilderkennung und Pflanzplanung implementieren
+#print(df) # Auskommentiert, da Bilderkennung fehlt
