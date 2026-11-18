@@ -1,15 +1,35 @@
-def aufbereiten(daten):
-    # Hier kommt die Logik zur Datenaufbereitung
-    # z.B. Filtern, Berechnen von Pflanzpositionen
-    ergebnisse = []
-    for eintrag in daten:
-        # Beispiel: Nur Einträge mit positiver Lichtintensität behalten
-        if eintrag['lichtintensitaet'] > 0:
-            ergebnisse.append(eintrag)
-    return ergebnisse
+# -*- coding: utf-8 -*-
 
-# Beispielaufruf (wird später durch tatsächliche Daten ersetzt)
+import cv2
+
+
+def aufbereiten(bild):
+    # Konvertiere das Bild in den HSV-Farbraum
+    hsv = cv2.cvtColor(bild, cv2.COLOR_BGR2HSV)
+
+    # Definiere den unteren und oberen Grenzwert für Lavendel
+    unterer_grenzwert = (120, 50, 50)
+    oberer_grenzwert = (160, 255, 255)
+
+    # Erstelle eine Maske, die nur die Lavendelfarben hervorhebt
+    maske = cv2.inRange(hsv, unterer_grenzwert, oberer_grenzwert)
+
+    # Wende einen Gaußschen Weichzeichner an, um das Rauschen zu reduzieren
+    maske = cv2.GaussianBlur(maske, (5, 5), 0)
+
+    # Gib die Maske zurück
+    return maske
+
+
 if __name__ == '__main__':
-    beispieldaten = [{'x': 1, 'y': 2, 'lichtintensitaet': 5}, {'x': 3, 'y': 4, 'lichtintensitaet': -1}]
-    aufbereitete_daten = aufbereiten(beispieldaten)
-    print(aufbereitete_daten)
+    # Lade ein Beispielbild
+    bild = cv2.imread('lavendel.jpg')
+
+    # Bereite das Bild vor
+    maske = aufbereiten(bild)
+
+    # Zeige das Originalbild und die Maske an
+    cv2.imshow('Originalbild', bild)
+    cv2.imshow('Maske', maske)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
