@@ -1,4 +1,4 @@
-# Eine einfache Python-Datei, um Lavendel zu pflanzen
+import random
 
 def filter_lavendel(x, z):
   # Hier kommt die Logik, um zu prüfen, ob die Koordinaten
@@ -7,14 +7,10 @@ def filter_lavendel(x, z):
   #   return True
   # else:
   #   return False
-  return True
-
-# TODO: Eine Schleife hinzufügen, um alle freien Flächen zu bepflanzen
-
-def main():
-  # Hier kommt die Hauptlogik des Programms
-  # Zum Beispiel: eine Liste von Koordinaten durchlaufen und an die Pflanzfunktion übergeben
-  print("Lavendel wird gepflanzt...")
-
-if __name__ == "__main__":
-  main()
+  zufalls_x = random.uniform(-5, 5)
+  zufalls_z = random.uniform(-5, 5)
+  # Überprüfe, ob die Koordinaten innerhalb des Gartens liegen
+  if -5 <= zufalls_x <= 5 and -5 <= zufalls_z <= 5:
+    return True
+  else:
+    return False
