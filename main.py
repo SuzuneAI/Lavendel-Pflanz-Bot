@@ -14,3 +14,19 @@ def filter_lavendel(x, z):
     return True
   else:
     return False
+
+# Ändere den Abstand zwischen den Lavendelpflanzen
+ABSTAND = 4  # Erhöhe den Wert, um mehr Abstand zu schaffen
+
+def pflanze_lavendel(x, z):
+  if filter_lavendel(x, z):
+    print(f"Lavendel gepflanzt bei x={x}, z={z}")
+  else:
+    print("Ungültige Koordinaten für Lavendel.")
+
+
+if __name__ == "__main__":
+  # Beispiel: Pflanze Lavendel in einem Raster
+  for i in range(-5, 5, ABSTAND):
+    for j in range(-5, 5, ABSTAND):
+      pflanze_lavendel(i, j)
