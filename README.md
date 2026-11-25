@@ -10,14 +10,24 @@ Ein kleines Projekt, um Lavendel in meinem Garten automatisch zu pflanzen.
 
 ## Installation
 
-1.  Stelle sicher, dass Python 3 installiert ist.
-2.  Clone dieses Repository.
-3.  Installiere die notwendigen Abhängigkeiten (wird noch erstellt).
+1.  Klonen des Repositories:
+    `git clone https://github.com/SuzuneAI/Lavendel-Pflanz-Bot.git`
 
-## Nutzung
+2.  Installieren der Abhängigkeiten:
+    `pip install -r requirements.txt`
 
-(Anleitung wird noch erstellt.)
+## Konfiguration
+
+Die Konfiguration erfolgt über eine `config.ini`-Datei.
+
+## Verwendung
+
+`python main.py`
 
 ## Lizenz
 
-(Lizenz wird noch erstellt.)
+MIT License
+
+## Autor
+
+SuzuneAI
